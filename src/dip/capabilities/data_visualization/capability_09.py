@@ -1,0 +1,16 @@
+"""Data Visualization Control 09: Visual encodings, chart preparation and presentation rules."""
+from dip.sdk import Capability
+
+CAPABILITY = Capability(
+    code="data_visualization.09",
+    family="data_visualization",
+    title='Data Visualization Control 09',
+    description='Visual encodings, chart preparation and presentation rules',
+    operation="classify",
+    configuration={'field': 'region', 'target': 'data_visualization_value_09'},
+    tags=("data_visualization", "production-ready", "governed"),
+)
+
+def execute(rows: list[dict], context: dict | None = None):
+    """Execute this capability against a collection of records."""
+    return CAPABILITY.execute(rows, context)
