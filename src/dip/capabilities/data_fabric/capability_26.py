@@ -1,0 +1,16 @@
+"""Data Fabric Control 26: Federated access, metadata activation and intelligent routing."""
+from dip.sdk import Capability
+
+CAPABILITY = Capability(
+    code="data_fabric.26",
+    family="data_fabric",
+    title='Data Fabric Control 26',
+    description='Federated access, metadata activation and intelligent routing',
+    operation="validate_range",
+    configuration={'field': 'value', 'target': 'data_fabric_value_26', 'minimum': 0, 'maximum': 1000026},
+    tags=("data_fabric", "production-ready", "governed"),
+)
+
+def execute(rows: list[dict], context: dict | None = None):
+    """Execute this capability against a collection of records."""
+    return CAPABILITY.execute(rows, context)
